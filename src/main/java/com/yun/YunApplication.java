@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.yun;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.yun.service.UserService;
 
 /*
  * 控制器使用示例
@@ -60,5 +63,14 @@ public class YunApplication {
     	model.addAttribute("id", id);
     	model.addAttribute("name", name);
         return "hello";
+    }
+    
+    @Autowired
+    private UserService userService;
+    @ResponseBody
+    @RequestMapping("/database/{id}")
+    public String hello(@PathVariable("id") Integer id) {
+
+        return userService.getById(id).getName();
     }
 }
