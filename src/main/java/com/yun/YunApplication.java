@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.yun.service.PrototypeService;
+import com.yun.service.ScopeService;
 import com.yun.service.UserService;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /*
  * 控制器使用示例
  */
@@ -20,6 +23,8 @@ import com.yun.service.UserService;
 @Controller
 public class YunApplication {
 
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
 	public static void main(String[] args) {
 		SpringApplication.run(YunApplication.class, args);
 	}
@@ -72,5 +77,21 @@ public class YunApplication {
     public String hello(@PathVariable("id") Integer id) {
 
         return userService.getById(id).getName();
+    }
+    
+    @Autowired
+    private ScopeService scopeService;
+    
+    @ResponseBody
+    @RequestMapping("/setscopeid/{id}")
+    public String setScopeId(@PathVariable("id") Integer id) {
+        scopeService.setScopeId(id);
+        return "id is set by " + id;
+    }
+    
+    @ResponseBody
+    @RequestMapping("/getscopeid")
+    public String getScopeId() {
+        return scopeService.getScopeId();
     }
 }

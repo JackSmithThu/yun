@@ -1,0 +1,710 @@
+2017-06-25 03:00:49.389  INFO 10448 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 10448 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:00:49.466  INFO 10448 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:00:53.382  INFO 10448 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:00:53 CST 2017]; root of context hierarchy
+2017-06-25 03:01:01.152  INFO 10448 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:01:01.300  INFO 10448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:01:01.335  INFO 10448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:01:02.754  INFO 10448 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:01:02.755  INFO 10448 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9508 ms
+2017-06-25 03:01:02.995  INFO 10448 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:01:02.998  INFO 10448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:01:02.998  INFO 10448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:01:02.998  INFO 10448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:01:02.998  INFO 10448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:01:04.838  WARN 10448 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'yunApplication': Unsatisfied dependency expressed through field 'scopeService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scopeService': Unsatisfied dependency expressed through field 'sessionService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionService': Scope 'session' is not active for the current thread; consider defining a scoped proxy for this bean if you intend to refer to it from a singleton; nested exception is java.lang.IllegalStateException: No thread-bound request found: Are you referring to request attributes outside of an actual web request, or processing a request outside of the originally receiving thread? If you are actually operating within a web request and still receive this message, your code is probably running outside of DispatcherServlet/DispatcherPortlet: In this case, use RequestContextListener or RequestContextFilter to expose the current request.
+2017-06-25 03:01:04.840  INFO 10448 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2017-06-25 03:01:04.922  INFO 10448 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-06-25 03:01:04.938 ERROR 10448 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'yunApplication': Unsatisfied dependency expressed through field 'scopeService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scopeService': Unsatisfied dependency expressed through field 'sessionService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionService': Scope 'session' is not active for the current thread; consider defining a scoped proxy for this bean if you intend to refer to it from a singleton; nested exception is java.lang.IllegalStateException: No thread-bound request found: Are you referring to request attributes outside of an actual web request, or processing a request outside of the originally receiving thread? If you are actually operating within a web request and still receive this message, your code is probably running outside of DispatcherServlet/DispatcherPortlet: In this case, use RequestContextListener or RequestContextFilter to expose the current request.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.yun.YunApplication.main(YunApplication.java:25) [classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scopeService': Unsatisfied dependency expressed through field 'sessionService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionService': Scope 'session' is not active for the current thread; consider defining a scoped proxy for this bean if you intend to refer to it from a singleton; nested exception is java.lang.IllegalStateException: No thread-bound request found: Are you referring to request attributes outside of an actual web request, or processing a request outside of the originally receiving thread? If you are actually operating within a web request and still receive this message, your code is probably running outside of DispatcherServlet/DispatcherPortlet: In this case, use RequestContextListener or RequestContextFilter to expose the current request.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionService': Scope 'session' is not active for the current thread; consider defining a scoped proxy for this bean if you intend to refer to it from a singleton; nested exception is java.lang.IllegalStateException: No thread-bound request found: Are you referring to request attributes outside of an actual web request, or processing a request outside of the originally receiving thread? If you are actually operating within a web request and still receive this message, your code is probably running outside of DispatcherServlet/DispatcherPortlet: In this case, use RequestContextListener or RequestContextFilter to expose the current request.
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:355) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 32 common frames omitted
+Caused by: java.lang.IllegalStateException: No thread-bound request found: Are you referring to request attributes outside of an actual web request, or processing a request outside of the originally receiving thread? If you are actually operating within a web request and still receive this message, your code is probably running outside of DispatcherServlet/DispatcherPortlet: In this case, use RequestContextListener or RequestContextFilter to expose the current request.
+	at org.springframework.web.context.request.RequestContextHolder.currentRequestAttributes(RequestContextHolder.java:131) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.context.request.SessionScope.get(SessionScope.java:91) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 37 common frames omitted
+
+2017-06-25 03:13:15.465  INFO 10212 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 10212 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:13:15.467  INFO 10212 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:13:15.644  INFO 10212 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:13:15 CST 2017]; root of context hierarchy
+2017-06-25 03:13:16.884  INFO 10212 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:13:16.893  INFO 10212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:13:16.893  INFO 10212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:13:16.996  INFO 10212 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:13:16.996  INFO 10212 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1355 ms
+2017-06-25 03:13:17.121  INFO 10212 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:13:17.123  INFO 10212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:13:17.124  INFO 10212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:13:17.124  INFO 10212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:13:17.124  INFO 10212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:13:17.436  WARN 10212 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'yunApplication': Unsatisfied dependency expressed through field 'scopeService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scopeService': Unsatisfied dependency expressed through field 'sessionService'; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'sessionService' is expected to be of type 'com.yun.service.SessionService' but was actually of type 'com.sun.proxy.$Proxy69'
+2017-06-25 03:13:17.438  INFO 10212 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2017-06-25 03:13:17.461  INFO 10212 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-06-25 03:13:17.465 ERROR 10212 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'sessionService' could not be injected as a 'com.yun.service.SessionService' because it is a JDK dynamic proxy that implements:
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2017-06-25 03:14:11.081  INFO 11168 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 11168 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:14:11.083  INFO 11168 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:14:11.262  INFO 11168 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:14:11 CST 2017]; root of context hierarchy
+2017-06-25 03:14:12.509  INFO 11168 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:14:12.518  INFO 11168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:14:12.519  INFO 11168 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:14:12.616  INFO 11168 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:14:12.616  INFO 11168 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1357 ms
+2017-06-25 03:14:12.722  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:14:12.726  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:14:12.726  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:14:12.727  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:14:12.727  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:14:13.233  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:14:11 CST 2017]; root of context hierarchy
+2017-06-25 03:14:13.290  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 03:14:13.292  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 03:14:13.293  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 03:14:13.293  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:14:13.294  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:14:13.294  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scope/{id}]}" onto public java.lang.String com.yun.YunApplication.scope(java.lang.Integer)
+2017-06-25 03:14:13.297  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 03:14:13.297  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 03:14:13.320  INFO 11168 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:14:13.320  INFO 11168 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:14:13.354  INFO 11168 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:14:13.895  INFO 11168 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 03:14:13.969  INFO 11168 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 03:14:13.973  INFO 11168 --- [main] com.yun.YunApplication                   : Started YunApplication in 3.163 seconds (JVM running for 3.416)
+2017-06-25 03:17:35.352  INFO 10484 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 10484 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:17:35.355  INFO 10484 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:17:35.562  INFO 10484 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@48aaecc3: startup date [Sun Jun 25 03:17:35 CST 2017]; root of context hierarchy
+2017-06-25 03:17:36.876  INFO 10484 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:17:36.891  INFO 10484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:17:36.892  INFO 10484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:17:36.992  INFO 10484 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:17:36.992  INFO 10484 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1433 ms
+2017-06-25 03:17:37.103  INFO 10484 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:17:37.107  INFO 10484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:17:37.107  INFO 10484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:17:37.107  INFO 10484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:17:37.107  INFO 10484 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:17:37.619  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@48aaecc3: startup date [Sun Jun 25 03:17:35 CST 2017]; root of context hierarchy
+2017-06-25 03:17:37.668  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 03:17:37.669  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 03:17:37.670  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 03:17:37.670  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:17:37.670  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:17:37.670  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scope/{id}]}" onto public java.lang.String com.yun.YunApplication.scope(java.lang.Integer)
+2017-06-25 03:17:37.673  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 03:17:37.673  INFO 10484 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 03:17:37.697  INFO 10484 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:17:37.698  INFO 10484 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:17:37.728  INFO 10484 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:17:38.238  INFO 10484 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 03:17:38.283  INFO 10484 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 03:17:38.286  INFO 10484 --- [main] com.yun.YunApplication                   : Started YunApplication in 3.206 seconds (JVM running for 3.473)
+2017-06-25 03:18:16.689  INFO 10484 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 03:18:16.689  INFO 10484 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 03:18:16.703  INFO 10484 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2017-06-25 03:18:16.836  INFO 10484 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:18:16.837  INFO 10484 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : singletonService: 342639908
+2017-06-25 03:18:16.837  INFO 10484 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : prototypeService: 227494535
+2017-06-25 03:18:16.837  INFO 10484 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : sessionService: -51717726
+2017-06-25 03:18:16.837  INFO 10484 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : requestService: 614870921
+2017-06-25 03:18:31.558  INFO 10484 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:18:31.559  INFO 10484 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : singletonService: 342639908
+2017-06-25 03:18:31.559  INFO 10484 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : prototypeService: 227494535
+2017-06-25 03:18:31.559  INFO 10484 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : sessionService: -51717726
+2017-06-25 03:18:31.559  INFO 10484 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : requestService: 614870921
+2017-06-25 03:18:55.805  INFO 10484 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:18:55.805  INFO 10484 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : singletonService: 342639908
+2017-06-25 03:18:55.805  INFO 10484 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : prototypeService: 227494535
+2017-06-25 03:18:55.805  INFO 10484 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : sessionService: -51717726
+2017-06-25 03:18:55.805  INFO 10484 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : requestService: 614870921
+2017-06-25 03:22:48.600  INFO 10484 --- [http-nio-8080-exec-9] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:22:48.601  INFO 10484 --- [http-nio-8080-exec-9] com.yun.service.ScopeService             : singletonService: 342639908
+2017-06-25 03:22:48.601  INFO 10484 --- [http-nio-8080-exec-9] com.yun.service.ScopeService             : prototypeService: 227494535
+2017-06-25 03:22:48.601  INFO 10484 --- [http-nio-8080-exec-9] com.yun.service.ScopeService             : sessionService: -51717726
+2017-06-25 03:22:48.601  INFO 10484 --- [http-nio-8080-exec-9] com.yun.service.ScopeService             : requestService: 614870921
+2017-06-25 03:26:03.645  INFO 6308 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 6308 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:26:03.647  INFO 6308 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:26:03.819  INFO 6308 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:26:03 CST 2017]; root of context hierarchy
+2017-06-25 03:26:05.077  INFO 6308 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:26:05.087  INFO 6308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:26:05.088  INFO 6308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:26:05.185  INFO 6308 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:26:05.185  INFO 6308 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1369 ms
+2017-06-25 03:26:05.302  INFO 6308 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:26:05.305  INFO 6308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:26:05.305  INFO 6308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:26:05.305  INFO 6308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:26:05.306  INFO 6308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:26:05.898  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:26:03 CST 2017]; root of context hierarchy
+2017-06-25 03:26:05.980  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 03:26:05.981  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 03:26:05.981  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 03:26:05.982  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:26:05.982  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:26:05.982  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/scope/{id}]}" onto public java.lang.String com.yun.YunApplication.scope(java.lang.Integer)
+2017-06-25 03:26:05.984  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 03:26:05.985  INFO 6308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 03:26:06.011  INFO 6308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:26:06.012  INFO 6308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:26:06.044  INFO 6308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:26:08.115  INFO 6308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 03:26:09.145  INFO 6308 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 03:26:09.148  INFO 6308 --- [main] com.yun.YunApplication                   : Started YunApplication in 5.766 seconds (JVM running for 6.023)
+2017-06-25 03:26:15.653  INFO 6308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 03:26:15.653  INFO 6308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 03:26:15.671  INFO 6308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2017-06-25 03:26:15.743  INFO 6308 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:26:15.743  INFO 6308 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : singletonService: 193134087
+2017-06-25 03:26:15.743  INFO 6308 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService: 198140213
+2017-06-25 03:26:15.743  INFO 6308 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService: -663595642
+2017-06-25 03:26:15.743  INFO 6308 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService: 2993005
+2017-06-25 03:26:25.135  INFO 6308 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:26:25.135  INFO 6308 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : singletonService: 193134087
+2017-06-25 03:26:25.135  INFO 6308 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : prototypeService: 198140213
+2017-06-25 03:26:25.135  INFO 6308 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : sessionService: -663595642
+2017-06-25 03:26:25.135  INFO 6308 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : requestService: 2993005
+2017-06-25 03:42:52.999  INFO 5568 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 5568 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:42:53.001  INFO 5568 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:42:53.163  INFO 5568 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:42:53 CST 2017]; root of context hierarchy
+2017-06-25 03:42:54.411  INFO 5568 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:42:54.420  INFO 5568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:42:54.421  INFO 5568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:42:54.523  INFO 5568 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:42:54.523  INFO 5568 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1362 ms
+2017-06-25 03:42:54.633  INFO 5568 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:42:54.638  INFO 5568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:42:54.639  INFO 5568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:42:54.639  INFO 5568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:42:54.639  INFO 5568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:42:55.115  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:42:53 CST 2017]; root of context hierarchy
+2017-06-25 03:42:55.172  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 03:42:55.173  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 03:42:55.174  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 03:42:55.174  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:42:55.174  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:42:55.174  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 03:42:55.174  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 03:42:55.177  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 03:42:55.178  INFO 5568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 03:42:55.199  INFO 5568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:42:55.200  INFO 5568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:42:55.235  INFO 5568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:42:55.767  INFO 5568 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 03:42:55.828  INFO 5568 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 03:42:55.831  INFO 5568 --- [main] com.yun.YunApplication                   : Started YunApplication in 3.079 seconds (JVM running for 3.342)
+2017-06-25 03:43:15.990  INFO 5568 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 03:43:15.990  INFO 5568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 03:43:16.005  INFO 5568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2017-06-25 03:43:16.025  INFO 5568 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService id set:1
+2017-06-25 03:43:32.768  INFO 5568 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:43:32.769  INFO 5568 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : prototypeService id is:1
+2017-06-25 03:44:06.238  INFO 5504 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 5504 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:44:06.240  INFO 5504 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:44:06.412  INFO 5504 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:44:06 CST 2017]; root of context hierarchy
+2017-06-25 03:44:07.700  INFO 5504 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:44:07.714  INFO 5504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:44:07.716  INFO 5504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:44:07.818  INFO 5504 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:44:07.818  INFO 5504 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1409 ms
+2017-06-25 03:44:07.935  INFO 5504 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:44:07.939  INFO 5504 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:44:07.940  INFO 5504 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:44:07.940  INFO 5504 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:44:07.940  INFO 5504 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:44:08.433  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:44:06 CST 2017]; root of context hierarchy
+2017-06-25 03:44:08.486  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 03:44:08.487  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 03:44:08.487  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 03:44:08.487  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:44:08.487  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:44:08.488  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 03:44:08.488  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 03:44:08.491  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 03:44:08.491  INFO 5504 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 03:44:08.512  INFO 5504 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:44:08.513  INFO 5504 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:44:08.545  INFO 5504 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:44:09.075  INFO 5504 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 03:44:09.129  INFO 5504 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 03:44:09.134  INFO 5504 --- [main] com.yun.YunApplication                   : Started YunApplication in 3.153 seconds (JVM running for 3.418)
+2017-06-25 03:44:14.245  INFO 5504 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 03:44:14.246  INFO 5504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 03:44:14.257  INFO 5504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2017-06-25 03:44:14.274  INFO 5504 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:44:14.274  INFO 5504 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService id is:null
+2017-06-25 03:44:30.467  INFO 5504 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:44:30.467  INFO 5504 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : prototypeService id set:2
+2017-06-25 03:44:39.684  INFO 5504 --- [http-nio-8080-exec-9] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:44:39.684  INFO 5504 --- [http-nio-8080-exec-9] com.yun.service.ScopeService             : prototypeService id is:2
+2017-06-25 03:50:18.615  INFO 5504 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:50:18.616  INFO 5504 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : prototypeService id is:2
+2017-06-25 03:54:29.852  INFO 10376 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 10376 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:54:29.854  INFO 10376 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:54:32.151  INFO 10376 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:54:32 CST 2017]; root of context hierarchy
+2017-06-25 03:54:37.832  INFO 10376 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 03:54:37.849  INFO 10376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 03:54:37.850  INFO 10376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 03:54:37.970  INFO 10376 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 03:54:37.970  INFO 10376 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5837 ms
+2017-06-25 03:54:38.123  INFO 10376 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 03:54:38.127  INFO 10376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 03:54:38.127  INFO 10376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 03:54:38.128  INFO 10376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 03:54:38.128  INFO 10376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 03:54:39.029  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:54:32 CST 2017]; root of context hierarchy
+2017-06-25 03:54:39.103  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 03:54:39.104  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 03:54:39.105  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 03:54:39.105  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:54:39.106  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 03:54:39.106  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 03:54:39.106  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 03:54:39.110  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 03:54:39.111  INFO 10376 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 03:54:39.158  INFO 10376 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:54:39.158  INFO 10376 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:54:39.186  INFO 10376 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 03:54:40.768  INFO 10376 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 03:54:41.397  INFO 10376 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 03:54:41.402  INFO 10376 --- [main] com.yun.YunApplication                   : Started YunApplication in 12.029 seconds (JVM running for 17.728)
+2017-06-25 03:55:00.007  INFO 10376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 03:55:00.007  INFO 10376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 03:55:00.021  INFO 10376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2017-06-25 03:55:00.160  INFO 10376 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:55:00.160  INFO 10376 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id set:3
+2017-06-25 03:55:13.277  INFO 10376 --- [http-nio-8080-exec-5] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:55:13.277  INFO 10376 --- [http-nio-8080-exec-5] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 03:55:34.126  INFO 10376 --- [http-nio-8080-exec-8] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:55:34.127  INFO 10376 --- [http-nio-8080-exec-8] com.yun.service.ScopeService             : requestService id set:4
+2017-06-25 03:55:41.662  INFO 10376 --- [http-nio-8080-exec-10] com.yun.service.ScopeService             : =========================================
+2017-06-25 03:55:41.663  INFO 10376 --- [http-nio-8080-exec-10] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 03:59:54.106  INFO 3316 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 3316 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 03:59:54.176  INFO 3316 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 03:59:57.470  INFO 3316 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:59:57 CST 2017]; root of context hierarchy
+2017-06-25 04:00:01.963  INFO 3316 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:00:02.000  INFO 3316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:00:02.002  INFO 3316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:00:02.207  INFO 3316 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:00:02.207  INFO 3316 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4771 ms
+2017-06-25 04:00:02.311  INFO 3316 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:00:02.314  INFO 3316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:00:02.315  INFO 3316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:00:02.315  INFO 3316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:00:02.316  INFO 3316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:00:02.932  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 03:59:57 CST 2017]; root of context hierarchy
+2017-06-25 04:00:02.983  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:00:02.984  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:00:02.985  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:00:02.985  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:00:02.985  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:00:02.985  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:00:02.986  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:00:02.989  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:00:02.989  INFO 3316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:00:03.016  INFO 3316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:00:03.017  INFO 3316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:00:03.048  INFO 3316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:00:03.670  INFO 3316 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:00:04.502  INFO 3316 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:00:04.506  INFO 3316 --- [main] com.yun.YunApplication                   : Started YunApplication in 11.349 seconds (JVM running for 12.51)
+2017-06-25 04:00:14.771  INFO 3316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 04:00:14.771  INFO 3316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 04:00:14.782  INFO 3316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2017-06-25 04:00:14.818  INFO 3316 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:00:14.818  INFO 3316 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id set:8
+2017-06-25 04:00:14.818  INFO 3316 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService id set:8
+2017-06-25 04:00:19.268  INFO 3316 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:00:19.269  INFO 3316 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:00:19.269  INFO 3316 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : sessionService id is:8
+2017-06-25 04:01:05.623  INFO 8916 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 8916 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:01:05.625  INFO 8916 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:01:05.791  INFO 8916 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:01:05 CST 2017]; root of context hierarchy
+2017-06-25 04:01:06.937  INFO 8916 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:01:06.949  INFO 8916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:01:06.950  INFO 8916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:01:07.035  INFO 8916 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:01:07.035  INFO 8916 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1246 ms
+2017-06-25 04:01:07.169  INFO 8916 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:01:07.172  INFO 8916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:01:07.173  INFO 8916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:01:07.173  INFO 8916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:01:07.173  INFO 8916 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:01:07.666  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:01:05 CST 2017]; root of context hierarchy
+2017-06-25 04:01:07.726  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:01:07.728  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:01:07.728  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:01:07.728  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:01:07.728  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:01:07.729  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:01:07.729  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:01:07.731  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:01:07.732  INFO 8916 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:01:07.756  INFO 8916 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:01:07.756  INFO 8916 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:01:07.788  INFO 8916 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:01:08.303  INFO 8916 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:01:08.358  INFO 8916 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:01:08.360  INFO 8916 --- [main] com.yun.YunApplication                   : Started YunApplication in 2.993 seconds (JVM running for 3.241)
+2017-06-25 04:01:16.857  INFO 8916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 04:01:16.858  INFO 8916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 04:01:16.870  INFO 8916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2017-06-25 04:01:16.891  INFO 8916 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:01:16.898  INFO 8916 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:01:16.911  INFO 8916 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService id is:null
+2017-06-25 04:01:22.536  INFO 8916 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:01:22.536  INFO 8916 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : requestService id set:9
+2017-06-25 04:01:22.536  INFO 8916 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : sessionService id set:9
+2017-06-25 04:01:26.712  INFO 8916 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:01:26.713  INFO 8916 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:01:26.713  INFO 8916 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : sessionService id is:9
+2017-06-25 04:01:51.464  INFO 10744 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 10744 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:01:51.466  INFO 10744 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:01:51.639  INFO 10744 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:01:51 CST 2017]; root of context hierarchy
+2017-06-25 04:01:52.888  INFO 10744 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:01:52.896  INFO 10744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:01:52.897  INFO 10744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:01:53.026  INFO 10744 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:01:53.026  INFO 10744 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1390 ms
+2017-06-25 04:01:53.138  INFO 10744 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:01:53.140  INFO 10744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:01:53.141  INFO 10744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:01:53.141  INFO 10744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:01:53.141  INFO 10744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:01:53.601  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:01:51 CST 2017]; root of context hierarchy
+2017-06-25 04:01:53.653  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:01:53.655  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:01:53.656  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:01:53.656  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:01:53.656  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:01:53.657  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:01:53.657  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:01:53.660  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:01:53.661  INFO 10744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:01:53.686  INFO 10744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:01:53.687  INFO 10744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:01:53.727  INFO 10744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:01:54.295  INFO 10744 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:01:54.351  INFO 10744 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:01:54.354  INFO 10744 --- [main] com.yun.YunApplication                   : Started YunApplication in 3.144 seconds (JVM running for 3.397)
+2017-06-25 04:05:00.860  INFO 10560 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 10560 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:05:00.862  INFO 10560 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:05:01.042  INFO 10560 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:05:01 CST 2017]; root of context hierarchy
+2017-06-25 04:05:02.215  INFO 10560 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:05:02.224  INFO 10560 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:05:02.225  INFO 10560 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:05:02.311  INFO 10560 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:05:02.311  INFO 10560 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1271 ms
+2017-06-25 04:05:02.439  INFO 10560 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:05:02.443  INFO 10560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:05:02.444  INFO 10560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:05:02.444  INFO 10560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:05:02.444  INFO 10560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:05:02.912  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:05:01 CST 2017]; root of context hierarchy
+2017-06-25 04:05:02.966  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:05:02.967  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:05:02.968  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:05:02.968  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:05:02.968  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:05:02.968  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:05:02.969  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:05:02.972  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:05:02.973  INFO 10560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:05:03.005  INFO 10560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:05:03.005  INFO 10560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:05:03.035  INFO 10560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:05:03.542  INFO 10560 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:05:03.597  INFO 10560 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:05:03.599  INFO 10560 --- [main] com.yun.YunApplication                   : Started YunApplication in 2.977 seconds (JVM running for 3.224)
+2017-06-25 04:05:32.796  INFO 10736 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 10736 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:05:32.799  INFO 10736 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:05:32.953  INFO 10736 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:05:32 CST 2017]; root of context hierarchy
+2017-06-25 04:05:34.173  INFO 10736 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:05:34.183  INFO 10736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:05:34.184  INFO 10736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:05:34.293  INFO 10736 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:05:34.293  INFO 10736 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1343 ms
+2017-06-25 04:05:34.405  INFO 10736 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:05:34.409  INFO 10736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:05:34.410  INFO 10736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:05:34.410  INFO 10736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:05:34.410  INFO 10736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:05:34.855  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:05:32 CST 2017]; root of context hierarchy
+2017-06-25 04:05:34.909  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:05:34.910  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:05:34.910  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:05:34.910  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:05:34.911  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:05:34.911  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:05:34.911  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:05:34.914  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:05:34.915  INFO 10736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:05:34.939  INFO 10736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:05:34.939  INFO 10736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:05:34.972  INFO 10736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:05:35.460  INFO 10736 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:05:35.510  INFO 10736 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:05:35.513  INFO 10736 --- [main] com.yun.YunApplication                   : Started YunApplication in 2.952 seconds (JVM running for 3.216)
+2017-06-25 04:05:41.888  INFO 10736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 04:05:41.888  INFO 10736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 04:05:41.900  INFO 10736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2017-06-25 04:05:41.937  INFO 10736 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:05:41.937  INFO 10736 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id set:9
+2017-06-25 04:05:41.937  INFO 10736 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService id set:9
+2017-06-25 04:05:41.937  INFO 10736 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : singletonService id set:9
+2017-06-25 04:05:41.937  INFO 10736 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService id set:9
+2017-06-25 04:05:45.198  INFO 10736 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:05:45.199  INFO 10736 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:05:45.200  INFO 10736 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : sessionService id is:9
+2017-06-25 04:05:45.200  INFO 10736 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : singletonService id is:9
+2017-06-25 04:05:45.200  INFO 10736 --- [http-nio-8080-exec-3] com.yun.service.ScopeService             : prototypeService id is:9
+2017-06-25 04:06:20.337  INFO 4724 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 4724 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:06:20.339  INFO 4724 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:06:20.507  INFO 4724 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:06:20 CST 2017]; root of context hierarchy
+2017-06-25 04:06:21.702  INFO 4724 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:06:21.713  INFO 4724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:06:21.714  INFO 4724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:06:21.806  INFO 4724 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:06:21.806  INFO 4724 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1302 ms
+2017-06-25 04:06:21.917  INFO 4724 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:06:21.920  INFO 4724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:06:21.921  INFO 4724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:06:21.921  INFO 4724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:06:21.921  INFO 4724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:06:22.406  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:06:20 CST 2017]; root of context hierarchy
+2017-06-25 04:06:22.459  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:06:22.460  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:06:22.461  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:06:22.461  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:06:22.461  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:06:22.461  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:06:22.462  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:06:22.464  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:06:22.465  INFO 4724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:06:22.488  INFO 4724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:06:22.489  INFO 4724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:06:22.524  INFO 4724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:06:23.017  INFO 4724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:06:23.070  INFO 4724 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:06:23.074  INFO 4724 --- [main] com.yun.YunApplication                   : Started YunApplication in 2.973 seconds (JVM running for 3.227)
+2017-06-25 04:06:31.512  INFO 4724 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 04:06:31.512  INFO 4724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 04:06:31.525  INFO 4724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2017-06-25 04:06:31.561  INFO 4724 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:06:31.561  INFO 4724 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id set:20
+2017-06-25 04:06:31.561  INFO 4724 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService id set:20
+2017-06-25 04:06:31.561  INFO 4724 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : singletonService id set:20
+2017-06-25 04:06:31.561  INFO 4724 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService id set:20
+2017-06-25 04:06:34.951  INFO 4724 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:06:34.953  INFO 4724 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:06:34.953  INFO 4724 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : sessionService id is:20
+2017-06-25 04:06:34.953  INFO 4724 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : singletonService id is:20
+2017-06-25 04:06:34.953  INFO 4724 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : prototypeService id is:20
+2017-06-25 04:07:03.046  INFO 6800 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 6800 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:07:03.048  INFO 6800 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:07:03.201  INFO 6800 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:07:03 CST 2017]; root of context hierarchy
+2017-06-25 04:07:04.376  INFO 6800 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:07:04.385  INFO 6800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:07:04.386  INFO 6800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:07:04.472  INFO 6800 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:07:04.472  INFO 6800 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1274 ms
+2017-06-25 04:07:04.579  INFO 6800 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:07:04.584  INFO 6800 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:07:04.585  INFO 6800 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:07:04.585  INFO 6800 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:07:04.585  INFO 6800 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:07:05.045  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:07:03 CST 2017]; root of context hierarchy
+2017-06-25 04:07:05.097  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:07:05.098  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:07:05.099  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:07:05.099  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:07:05.100  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:07:05.100  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:07:05.100  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:07:05.102  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:07:05.103  INFO 6800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:07:05.125  INFO 6800 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:07:05.125  INFO 6800 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:07:05.156  INFO 6800 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:07:05.661  INFO 6800 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:07:05.710  INFO 6800 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:07:05.713  INFO 6800 --- [main] com.yun.YunApplication                   : Started YunApplication in 2.902 seconds (JVM running for 3.16)
+2017-06-25 04:07:15.122  INFO 6800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 04:07:15.122  INFO 6800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 04:07:15.134  INFO 6800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2017-06-25 04:07:15.174  INFO 6800 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:07:15.174  INFO 6800 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id set:12
+2017-06-25 04:07:15.174  INFO 6800 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService id set:12
+2017-06-25 04:07:15.174  INFO 6800 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : singletonService id set:12
+2017-06-25 04:07:15.174  INFO 6800 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService id set:12
+2017-06-25 04:07:17.888  INFO 6800 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:07:17.889  INFO 6800 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:07:17.890  INFO 6800 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : sessionService id is:12
+2017-06-25 04:07:17.890  INFO 6800 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : singletonService id is:12
+2017-06-25 04:07:17.890  INFO 6800 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : prototypeService id is:12
+2017-06-25 04:08:30.254  INFO 6428 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 6428 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:08:30.257  INFO 6428 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:08:30.426  INFO 6428 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:08:30 CST 2017]; root of context hierarchy
+2017-06-25 04:08:31.566  INFO 6428 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:08:31.576  INFO 6428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:08:31.577  INFO 6428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:08:31.655  INFO 6428 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:08:31.655  INFO 6428 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1234 ms
+2017-06-25 04:08:31.753  INFO 6428 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:08:31.757  INFO 6428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:08:31.758  INFO 6428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:08:31.758  INFO 6428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:08:31.758  INFO 6428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:08:32.224  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:08:30 CST 2017]; root of context hierarchy
+2017-06-25 04:08:32.268  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:08:32.269  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:08:32.270  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:08:32.270  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:08:32.270  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:08:32.270  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:08:32.271  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:08:32.273  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:08:32.273  INFO 6428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:08:32.296  INFO 6428 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:08:32.296  INFO 6428 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:08:32.319  INFO 6428 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:08:32.821  INFO 6428 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:08:32.868  INFO 6428 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:08:32.871  INFO 6428 --- [main] com.yun.YunApplication                   : Started YunApplication in 2.879 seconds (JVM running for 3.147)
+2017-06-25 04:08:40.170  INFO 6428 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 04:08:40.171  INFO 6428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 04:08:40.183  INFO 6428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2017-06-25 04:08:40.221  INFO 6428 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:08:40.221  INFO 6428 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id set:7
+2017-06-25 04:08:40.221  INFO 6428 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService id set:7
+2017-06-25 04:08:40.221  INFO 6428 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : singletonService id set:7
+2017-06-25 04:08:40.221  INFO 6428 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService id set:7
+2017-06-25 04:08:42.865  INFO 6428 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:08:42.867  INFO 6428 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:08:42.868  INFO 6428 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : sessionService id is:7
+2017-06-25 04:08:42.868  INFO 6428 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : singletonService id is:7
+2017-06-25 04:08:42.868  INFO 6428 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : prototypeService id is:7
+2017-06-25 04:09:37.143  INFO 6428 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:09:37.144  INFO 6428 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:09:37.145  INFO 6428 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : sessionService id is:null
+2017-06-25 04:09:37.145  INFO 6428 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : singletonService id is:7
+2017-06-25 04:09:37.145  INFO 6428 --- [http-nio-8080-exec-4] com.yun.service.ScopeService             : prototypeService id is:7
+2017-06-25 04:10:21.222  INFO 6428 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:10:21.224  INFO 6428 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:10:21.225  INFO 6428 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : sessionService id is:7
+2017-06-25 04:10:21.225  INFO 6428 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : singletonService id is:7
+2017-06-25 04:10:21.225  INFO 6428 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : prototypeService id is:7
+2017-06-25 04:37:26.263  INFO 11224 --- [main] com.yun.YunApplication                   : Starting YunApplication on Lenovo-PC with PID 11224 (E:\WorkSpace\Eclipse\yun\target\classes started by Lenovo in E:\WorkSpace\Eclipse\yun)
+2017-06-25 04:37:26.264  INFO 11224 --- [main] com.yun.YunApplication                   : No active profile set, falling back to default profiles: default
+2017-06-25 04:37:26.424  INFO 11224 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:37:26 CST 2017]; root of context hierarchy
+2017-06-25 04:37:27.561  INFO 11224 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-25 04:37:27.573  INFO 11224 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-06-25 04:37:27.574  INFO 11224 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-06-25 04:37:27.678  INFO 11224 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-25 04:37:27.679  INFO 11224 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1258 ms
+2017-06-25 04:37:27.801  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-25 04:37:27.805  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-25 04:37:27.806  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-25 04:37:27.806  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-25 04:37:27.806  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-25 04:37:28.291  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60d8c9b7: startup date [Sun Jun 25 04:37:26 CST 2017]; root of context hierarchy
+2017-06-25 04:37:28.346  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.yun.YunApplication.index()
+2017-06-25 04:37:28.347  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.yun.YunApplication.greeting()
+2017-06-25 04:37:28.348  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/database/{id}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.Integer)
+2017-06-25 04:37:28.348  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/{id}/{name}]}" onto public java.lang.String com.yun.YunApplication.hello(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:37:28.348  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.yun.YunApplication.hello2(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2017-06-25 04:37:28.348  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setscopeid/{id}]}" onto public java.lang.String com.yun.YunApplication.setScopeId(java.lang.Integer)
+2017-06-25 04:37:28.349  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getscopeid]}" onto public java.lang.String com.yun.YunApplication.getScopeId()
+2017-06-25 04:37:28.351  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-25 04:37:28.352  INFO 11224 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-25 04:37:28.378  INFO 11224 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:37:28.379  INFO 11224 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:37:28.410  INFO 11224 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-25 04:37:28.977  INFO 11224 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-06-25 04:37:29.025  INFO 11224 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-25 04:37:29.028  INFO 11224 --- [main] com.yun.YunApplication                   : Started YunApplication in 3.002 seconds (JVM running for 3.245)
+2017-06-25 04:37:37.386  INFO 11224 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-25 04:37:37.387  INFO 11224 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-25 04:37:37.397  INFO 11224 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2017-06-25 04:37:37.437  INFO 11224 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:37:37.437  INFO 11224 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : requestService id set:7
+2017-06-25 04:37:37.437  INFO 11224 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : sessionService id set:7
+2017-06-25 04:37:37.437  INFO 11224 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : singletonService id set:7
+2017-06-25 04:37:37.437  INFO 11224 --- [http-nio-8080-exec-2] com.yun.service.ScopeService             : prototypeService id set:7
+2017-06-25 04:37:40.305  INFO 11224 --- [http-nio-8080-exec-1] ication$$EnhancerBySpringCGLIB$$4a16d019 : =================================================
+2017-06-25 04:37:40.305  INFO 11224 --- [http-nio-8080-exec-1] ication$$EnhancerBySpringCGLIB$$4a16d019 : prototypeService.getId(): 7
+2017-06-25 04:37:40.305  INFO 11224 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:37:40.306  INFO 11224 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:37:40.306  INFO 11224 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : sessionService id is:7
+2017-06-25 04:37:40.306  INFO 11224 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : singletonService id is:7
+2017-06-25 04:37:40.306  INFO 11224 --- [http-nio-8080-exec-1] com.yun.service.ScopeService             : prototypeService id is:7
+2017-06-25 04:38:05.847  INFO 11224 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:38:05.848  INFO 11224 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : requestService id set:8
+2017-06-25 04:38:05.848  INFO 11224 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : sessionService id set:8
+2017-06-25 04:38:05.848  INFO 11224 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : singletonService id set:8
+2017-06-25 04:38:05.848  INFO 11224 --- [http-nio-8080-exec-6] com.yun.service.ScopeService             : prototypeService id set:8
+2017-06-25 04:38:09.110  INFO 11224 --- [http-nio-8080-exec-7] ication$$EnhancerBySpringCGLIB$$4a16d019 : =================================================
+2017-06-25 04:38:09.110  INFO 11224 --- [http-nio-8080-exec-7] ication$$EnhancerBySpringCGLIB$$4a16d019 : prototypeService.getId(): 8
+2017-06-25 04:38:09.110  INFO 11224 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : =========================================
+2017-06-25 04:38:09.110  INFO 11224 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : requestService id is:null
+2017-06-25 04:38:09.110  INFO 11224 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : sessionService id is:8
+2017-06-25 04:38:09.110  INFO 11224 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : singletonService id is:8
+2017-06-25 04:38:09.110  INFO 11224 --- [http-nio-8080-exec-7] com.yun.service.ScopeService             : prototypeService id is:8
