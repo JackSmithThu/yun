@@ -1,5 +1,7 @@
 package com.yun;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,11 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.yun.service.PrototypeService;
+import com.yun.service.LoggerService;
 import com.yun.service.ScopeService;
 import com.yun.service.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 /*
  * 控制器使用示例
  */
@@ -23,8 +23,6 @@ import org.slf4j.LoggerFactory;
 @Controller
 public class YunApplication {
 
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	
 	public static void main(String[] args) {
 		SpringApplication.run(YunApplication.class, args);
 	}
@@ -93,5 +91,21 @@ public class YunApplication {
     @RequestMapping("/getscopeid")
     public String getScopeId() {
         return scopeService.getScopeId();
+    }
+    
+    @Autowired
+    private LoggerService loggerService;
+    @ResponseBody
+    @RequestMapping("/logger")
+    public String logger() {
+    	loggerService.run();
+        return "logger request";
+    }
+    
+    @ResponseBody
+    @RequestMapping("/login")
+    public String login(HttpSession session) {
+    	session.setAttribute("userId", "jackie");
+        return "login";
     }
 }
